@@ -1,3 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+
+  body {
+    @apply box-border m-0 p-0 font-body;
+  }
+  h1 {
+    @apply font-bold text-black text-3xl;
+  }
+  h2 {
+    @apply font-bold text-black text-2xl;
+  }
+  h3 {
+    @apply font-semibold text-black text-xl;
+  }
+  h4 {
+    @apply font-medium text-black text-lg;
+  }
+  h5 {
+    @apply font-normal text-black text-sm;
+  }
+  h6 {
+    @apply font-light text-black text-sm;
+  }
+
+  p {
+    @apply font-normal text-gray-500 text-sm;
+  }
+}
