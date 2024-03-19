@@ -1,12 +1,12 @@
-import React from 'react'
+import { Container } from "@chakra-ui/react";
+import HeroSection from "../../components/home/HeroSection";
 
 const HomePage = () => {
   return (
-    <div>
+    <Container maxW="4xl" >
+      <HeroSection  />
+    </Container>
+  );
+};
 
-        <p className="text-center">Home Page</p>
-    </div>
-  )
-}
-
-export default HomePage
+export default HomePage;

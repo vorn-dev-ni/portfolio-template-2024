@@ -5,7 +5,7 @@ import MyLogo from "./MyLogo";
 const Navbar = () => {
   const linkStyle = {
     color: "primary.500",
-    transitionDuration: "0.5s",
+    transitionDuration: "0.25s",
     transitionTimingFunction: "ease-in-out",
   };
   return (
@@ -34,8 +34,11 @@ const Navbar = () => {
           <ListItem _hover={linkStyle}>
             <NavLink to={"/"}>Contact</NavLink>
           </ListItem>
-          <ListItem _hover={linkStyle}>
-            <NavLink to={"/"}>Download CV</NavLink>
+          <ListItem  bg={
+            "primary.400"
+          } color={'white'} px={4} py={2} borderRadius={20}>
+
+            <NavLink to={"/"} download={'/'}>Download CV</NavLink>
           </ListItem>
         </HStack>
       </List>
