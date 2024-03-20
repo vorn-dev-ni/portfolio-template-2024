@@ -1,33 +1,18 @@
 import {
   Box,
   Button,
-  Card,
-  CardBody,
-  CardHeader,
-  Center,
   Container,
-  Flex,
-  Grid,
   HStack,
   Heading,
-  Image,
   Input,
-  Stack,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
   Text,
   VStack,
 } from "@chakra-ui/react";
-import Example from "../../assets/projects/example.png";
-import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const SendContact = () => {
   return (
-    <Box mb={100}>
-      
+    <Box mb={100} id="contact-me">
       <Heading as={"h3"} textAlign={"center"}>
         Lets Design Together
       </Heading>
@@ -44,6 +29,9 @@ const SendContact = () => {
 };
 
 const ContactForm = () => {
+  const mailtoHref =
+    "mailto:Nightpp19@gmail.com?subject=Job&body=YourDescription";
+
   return (
     <Container>
       <Box>
@@ -58,9 +46,11 @@ const ContactForm = () => {
               bg="#F8F8F8"
               placeholder="Enter Your Email"
             />
-            <Button colorScheme="orange" bg={'primary.400'} size="md">
-              Contact Me
-            </Button>
+            <a href={mailtoHref} >
+              <Button colorScheme="orange" bg={"primary.400"} size="md">
+                Contact Me
+              </Button>
+            </a>
           </HStack>
         </form>
       </Box>

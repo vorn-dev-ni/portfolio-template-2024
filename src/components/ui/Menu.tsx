@@ -1,5 +1,6 @@
 import { HStack, ListItem, VStack, Stack } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
+import { Link } from "@chakra-ui/react";
 
 const Menu = ({ layout = "verti" }: { layout: "hori" | "verti" }) => {
   const linkStyle = {
@@ -8,6 +9,7 @@ const Menu = ({ layout = "verti" }: { layout: "hori" | "verti" }) => {
     transitionTimingFunction: "ease-in-out",
   };
   const direction = layout === "hori" ? "row" : "column";
+  const MyCV = "../../../panhavorn.pdf";
   return (
     <Stack
       display={{ base: layout === "hori" ? "none" : "block", lg: "flex" }}
@@ -15,20 +17,20 @@ const Menu = ({ layout = "verti" }: { layout: "hori" | "verti" }) => {
       direction={direction}
       alignItems={"center"}
       sx={{
-        listStyle:'none'
+        listStyle: "none",
       }}
     >
-      <ListItem _hover={linkStyle} mb={8} textAlign={'center'}>
+      <ListItem _hover={linkStyle} mb={8} textAlign={"center"}>
         <NavLink to={"/"}>Home</NavLink>
       </ListItem>
-      <ListItem _hover={linkStyle}  mb={8} textAlign={'center'}>
-        <NavLink to={"/"}>About Me</NavLink>
+      <ListItem _hover={linkStyle} mb={8} textAlign={"center"}>
+        <Link href={"/#about-me"}>About Me</Link>
       </ListItem>
-      <ListItem _hover={linkStyle}  mb={8} textAlign={'center'}>
-        <NavLink to={"/"}>Projects</NavLink>
+      <ListItem _hover={linkStyle} mb={8} textAlign={"center"}>
+        <Link href={"/#project-me"}>Projects</Link>
       </ListItem>
-      <ListItem _hover={linkStyle}  mb={8} textAlign={'center'}>
-        <NavLink to={"/"}>Contact</NavLink>
+      <ListItem _hover={linkStyle} mb={8} textAlign={"center"}>
+        <Link href={"/#contact-me"}>Contact</Link>
       </ListItem>
       <ListItem
         bg={"primary.400"}
@@ -36,12 +38,12 @@ const Menu = ({ layout = "verti" }: { layout: "hori" | "verti" }) => {
         px={4}
         py={2}
         mb={8}
-        textAlign={'center'}
+        textAlign={"center"}
         borderRadius={20}
       >
-        <NavLink to={"/"} download={"/"} >
+        <a href={MyCV} download="Sivsovanpanhavorn.pdf">
           Download CV
-        </NavLink>
+        </a>
       </ListItem>
     </Stack>
   );

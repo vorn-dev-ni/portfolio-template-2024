@@ -97,8 +97,6 @@ const RightProfile = () => {
         top={20}
         left={'25%'}
         right={'25%'}
- 
-        // right={450/2}
       ></Box>
       <Center>
         <Image

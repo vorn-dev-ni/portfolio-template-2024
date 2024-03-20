@@ -1,11 +1,9 @@
 import {
   Box,
-  Button,
   Center,
   Container,
   Grid,
   GridItem,
-  HStack,
   Heading,
   Image,
   Slider,
@@ -13,11 +11,15 @@ import {
   SliderThumb,
   SliderTrack,
   Text,
+  Tooltip,
   VStack,
 } from "@chakra-ui/react";
+import { skills } from "../../utils/info";
 const AboutMe = () => {
   return (
     <Grid
+      id="about-me"
+      as={"section"}
       templateColumns={{
         base: "repeat(1,1fr)",
         md: "repeat(2, 1fr)",
@@ -48,22 +50,23 @@ const RightBarProgress = () => {
     {
       subject: "Front End",
       value: 75,
+      tags: [skills[0], skills[1], skills[2]],
     },
     {
       subject: "Mobile App ",
       value: 75,
+      tags: [skills[3], skills[6], skills[10]],
     },
     {
       subject: "BackEnd ",
       value: 50,
+      tags: [skills[5], skills[8]],
     },
-    {
-      subject: "UX UI Figma ",
-      value: 50,
-    },
+
     {
       subject: "Figma Tool",
       value: 25,
+      tags: [skills[12]],
     },
   ];
   return (
@@ -110,7 +113,13 @@ const ProgressChart = ({ item }: { item: any }) => {
         <SliderTrack bg="gray.300" h={2}>
           <SliderFilledTrack bg="primary.500" />
         </SliderTrack>
-        <SliderThumb boxSize={5} borderWidth={2} borderColor={"primary.500"} />
+        <Tooltip placement={`top`} label={`Experience in  ${item.tags}`}>
+          <SliderThumb
+            boxSize={5}
+            borderWidth={2}
+            borderColor={"primary.500"}
+          />
+        </Tooltip>
       </Slider>
     </Box>
   );
@@ -141,7 +150,6 @@ const ImageAvatar = () => {
           fallbackSrc="https://via.placeholder.com/150"
         />
       </Center>
-
     </Box>
   );
 };
