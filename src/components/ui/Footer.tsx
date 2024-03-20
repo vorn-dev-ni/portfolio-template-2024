@@ -3,10 +3,7 @@ import { BottomContact } from "./BottomContact";
 import Info from "./Info";
 const Footer = () => {
   return (
-    <Box w={"100%"} h={'fit-content'}   sx={{
-      position: "sticky",
-      bottom: 0,
-    }}>
+    <Box w={"100%"} h={'fit-content'}  >
       <BottomContact />
       <Info />
     </Box>

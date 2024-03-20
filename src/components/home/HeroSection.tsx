@@ -1,19 +1,25 @@
 import {
   Box,
   Button,
+  Center,
   Container,
   Grid,
   GridItem,
+  HStack,
   Heading,
   Image,
   Text,
   VStack,
 } from "@chakra-ui/react";
 
+import SocialStack from "../ui/SocialStack";
 const HeroSection = () => {
   return (
     <Grid
-      templateColumns="repeat(2, 1fr)"
+      templateColumns={{
+        base: "repeat(1,1fr)",
+        md: "repeat(2, 1fr)",
+      }}
       gap={3}
       my={20}
       justifyContent={"space-between"}
@@ -30,14 +36,20 @@ const HeroSection = () => {
 
 const LeftHeader = () => {
   return (
-    <Container color={"black"}>
+    <Container color={"black"} mb={20}>
       <Box as="div">
-        <Text color={"black"}>Hi i am</Text>
-        <Text color={"primary.500"} fontWeight={"600"}>
+        <Text color={"black"}>Hi My Name's</Text>
+        <Text color={"primary.500"} fontWeight={"600"} fontSize={16}>
           Siv Sovanpanhavorn
         </Text>
         <Heading as={"h2"}>Web & Mobile</Heading>
-        <Heading as={"h2"} textAlign={"right"}>
+        <Heading
+          as={"h2"}
+          textAlign={{
+            base: "start",
+            md: "right",
+          }}
+        >
           Developer
         </Heading>
       </Box>
@@ -50,7 +62,11 @@ const LeftHeader = () => {
         <Button
           colorScheme={"orange"}
           bg="primary.400"
-          size={"xs"}
+          size={{
+            base: "md",
+            md: "s",
+            lg: "lg",
+          }}
           p={2}
           justifySelf={"self-start"}
         >
@@ -67,24 +83,35 @@ const RightProfile = () => {
       <Box
         bg="primary.400"
         w="50%"
-        p={6}
+       p={5}
+       
+      
         color="white"
-        opacity={0.5}
+        opacity={0.3}
         position={"absolute"}
         alignItems={"center"}
+        maxWidth={'100%'}
+        margin={'auto'}
+
         justifyContent={"center"}
-        top={120}
-        left={450 / 4}
+        top={20}
+        left={'25%'}
+        right={'25%'}
+ 
         // right={450/2}
       ></Box>
-      <Image
-        borderRadius="full"
-        boxSize="450px"
-        fit={"cover"}
-        src="https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVuJTIwcHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
-        alt="Image-Profile"
-        fallbackSrc="https://via.placeholder.com/150"
-      />
+      <Center>
+        <Image
+          borderRadius="full"
+          boxSize="350px"
+          fit={"cover"}
+          src="https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVuJTIwcHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+          alt="Image-Profile"
+          fallbackSrc="https://via.placeholder.com/150"
+        />
+      </Center>
+
+      <SocialStack />
     </Box>
   );
 };

@@ -1,15 +1,7 @@
-import {
-  Box,
-  Center,
-  Container,
-  Flex,
-  Heading,
-  Image,
-  Text,
-} from "@chakra-ui/react";
-import React from "react";
+import { Box, Center, Container, Flex, List } from "@chakra-ui/react";
 import MyLogo from "./MyLogo";
-
+import Menu from "./Menu";
+import SocialStack from "./SocialStack";
 export const BottomContact = () => {
   const IconImage = "../../assets/icon/Subtract.png";
   return (
@@ -20,6 +12,12 @@ export const BottomContact = () => {
             <MyLogo />
           </Flex>
         </Center>
+      </Container>
+      <Container pb={20}>
+        <List>
+          <Menu layout="hori"/>
+          <SocialStack />
+        </List>
       </Container>
     </Box>
   );

@@ -1,16 +1,7 @@
-import { Box, Flex, Text  } from "@chakra-ui/react";
-import React from "react";
-
+import { Box, Flex, Text } from "@chakra-ui/react";
 const Info = () => {
   return (
-    <Box
-      as="div"
-      textAlign="center"
-      bg="accent.300"
-      w={"100%"}
-      p={4}
-    
-    >
+    <Box as="div" textAlign="center" bg="accent.300" w={"100%"} p={4}>
       <Flex gap={2} justifyContent={"center"} alignItems={"center"}>
         <Text
           fontSize={{
@@ -47,6 +38,7 @@ const Info = () => {
           All Rights Reserved , Inc.
         </Text>
       </Flex>
+
     </Box>
   );
 };
