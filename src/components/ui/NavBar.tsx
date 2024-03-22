@@ -1,8 +1,7 @@
-import { Container, HStack, List, ListItem, Spacer } from "@chakra-ui/react";
+import { Container, List, ListItem, Spacer } from "@chakra-ui/react";
 import Menu from "./Menu";
 import MyLogo from "./MyLogo";
 import DrawerMenu from "./DrawerMenu";
-import { useEffect, useState } from "react";
 
 const Navbar = () => {
  

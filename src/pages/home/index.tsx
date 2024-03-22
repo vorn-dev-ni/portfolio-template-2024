@@ -1,5 +1,5 @@
 import { Container } from "@chakra-ui/react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import HeroSection from "../../components/home/HeroSection";
@@ -7,7 +7,7 @@ import AboutMe from "../../components/home/AboutMe";
 import Service from "../../components/home/Service";
 import Project from "../../components/home/Project";
 import SendContact from "../../components/home/SendContact";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { AosOption } from "../../utils/aos";
 
 const HomePage = () => {
