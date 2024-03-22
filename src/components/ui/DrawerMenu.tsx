@@ -2,14 +2,11 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   useDisclosure,
-  Button,
-  Flex,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import MyLogo from "./MyLogo";

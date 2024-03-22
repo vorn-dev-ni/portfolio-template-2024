@@ -15,7 +15,6 @@ import NextJs from "../../assets/icon/next.png";
 import laravel from "../../assets/icon/laravel.png";
 import NodeJs from "../../assets/icon/node.png";
 import ReactJs from "../../assets/icon/react.png";
-import Figma from "../../assets/icon/figma.png";
 import Android from "../../assets/icon/android.png";
 import RN from "../../assets/icon/rn.svg";
 import Flutter from "../../assets/icon/Google-flutter-logo.png";
