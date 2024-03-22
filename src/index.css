@@ -4,9 +4,11 @@
 @tailwind utilities;
 
 @layer base {
-
+  html {
+    @apply scroll-smooth;
+  }
   body {
-    @apply box-border m-0 p-0 font-body;
+    @apply box-border m-0 p-0 font-body scroll-smooth;
   }
   h1 {
     @apply font-bold text-black text-3xl;
@@ -29,5 +31,11 @@
 
   p {
     @apply font-normal text-gray-500 text-sm;
+  }
+}
+
+@layer utilities {
+  .components {
+    @apply text-orange-500 ;
   }
 }
