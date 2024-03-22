@@ -27,9 +27,7 @@ const AboutMe = () => {
         md: "repeat(2, 1fr)",
       }}
       gap={10}
-      // my={20}
-      // mb={20}
-      justifyContent={"space-between"}
+        justifyContent={"space-between"}
       data-aos="fade-down"
       data-aos-offset="200"
       data-aos-delay="0"

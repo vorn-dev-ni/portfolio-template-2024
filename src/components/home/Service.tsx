@@ -17,11 +17,7 @@ import IconDesign from "../../assets/uiux.png";
 
 const Service = () => {
   const services = [
-    {
-      img: IconDesign,
-      skill: "UX UI",
-      description: "Tool like Figma ",
-    },
+ 
     {
       img: IconFrontend,
       skill: "Front End",
@@ -32,13 +28,18 @@ const Service = () => {
       img: IconMobile,
       skill: "Mobile App",
       description:
-        "Familiar with React Js, Vue Js and server side like Next Js",
+        "Some Experience in React Native and Flutter for hybrid platform",
     },
     {
       img: IconBackend,
       skill: "Backend",
       description:
         "Experience Backend Javascript like Nodejs , express and Python Django to build restful API.",
+    },
+    {
+      img: IconDesign,
+      skill: "Other",
+      description: "Understanding in using Tool like Figma for designing and Word Press for CMS Web application",
     },
   ];
   return (
