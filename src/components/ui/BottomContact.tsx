@@ -14,10 +14,12 @@ export const BottomContact = () => {
         </Center>
       </Container>
       <Container pb={20}>
-        <List>
-          <Menu layout="hori"/>
-          <SocialStack />
+        <List >
+          <Menu layout="hori" />
         </List>
+        <Box ml={8}>
+          <SocialStack />
+        </Box>
       </Container>
     </Box>
   );

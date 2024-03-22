@@ -15,6 +15,8 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { skills } from "../../utils/info";
+import profileImage from "../../assets/profile/pf.jpg";
+
 const AboutMe = () => {
   return (
     <Grid
@@ -25,9 +27,16 @@ const AboutMe = () => {
         md: "repeat(2, 1fr)",
       }}
       gap={10}
-      my={20}
-      mb={20}
+      // my={20}
+      // mb={20}
       justifyContent={"space-between"}
+      data-aos="fade-down"
+      data-aos-offset="200"
+      data-aos-delay="0"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
+      data-aos-mirror="true"
     >
       <GridItem
         w="100%"
@@ -75,10 +84,11 @@ const RightBarProgress = () => {
         <Heading as={"h3"}>About Me</Heading>
       </Box>
       <VStack spacing={6} align="start" my={4}>
-        <Text color={"accent.300"}>
-          Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
-          lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus
-          pharetra
+        <Text color={"accent.300"} textAlign={"left"}>
+          I specialize in web and mobile development, with expertise in both
+          front-end and back-end technologies. My passion lies in crafting
+          seamless digital experiences and solving complex technical challenges
+          and career.
         </Text>
       </VStack>
 
@@ -129,13 +139,13 @@ const ImageAvatar = () => {
     <Box as="div" position={"relative"} w={"100%"}>
       <Box
         bg="primary.400"
-        w="50%"
+        w="20%"
         color="white"
         opacity={0.5}
         position={"absolute"}
         alignItems={"center"}
         justifyContent={"center"}
-        top={120}
+        top={"25%"}
         left={0}
         right={0}
         // right={450/2}
@@ -145,7 +155,7 @@ const ImageAvatar = () => {
           borderRadius="full"
           boxSize="350px"
           fit={"cover"}
-          src="https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVuJTIwcHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+          src={profileImage}
           alt="Image-Profile"
           fallbackSrc="https://via.placeholder.com/150"
         />

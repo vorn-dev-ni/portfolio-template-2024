@@ -1,12 +1,19 @@
 import { Container, HStack, List, ListItem, Spacer } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
 import Menu from "./Menu";
 import MyLogo from "./MyLogo";
 import DrawerMenu from "./DrawerMenu";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+ 
   return (
-    <Container as={"nav"} maxWidth="5xl">
+    <Container
+      as={"nav"}
+      maxWidth="5xl"
+      className="!sticky !top-0 z-40 bg-white my-10 sm:my-0"
+      alignItems={"center"}
+      mb={150}
+    >
       <List
         color={"accent.400"}
         display={"flex"}
@@ -18,9 +25,11 @@ const Navbar = () => {
         </ListItem>
         <Spacer />
 
-        <Menu layout="hori"/>
+        <ListItem>
+          <Menu layout="hori" />
+        </ListItem>
+
         <DrawerMenu />
-       
       </List>
     </Container>
   );

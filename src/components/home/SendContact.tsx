@@ -8,19 +8,29 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
 
 const SendContact = () => {
   return (
-    <Box mb={100} id="contact-me">
+    <Box
+      as={"section"}
+      id="contact-me"
+      justifyContent={"space-between"}
+      data-aos="fade-left"
+      data-aos-offset="120"
+      data-aos-delay="0"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
+      data-aos-mirror="true"
+    >
       <Heading as={"h3"} textAlign={"center"}>
         Lets Design Together
       </Heading>
       <VStack spacing={10} align="start" my={10}>
         <Text color={"accent.300"} textAlign={"center"}>
-          Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
-          lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus
-          pharetra
+          Please don't mind to contact me if you ever need anything, I am 24h
+          available to reply. Thanks you for reaching out I hope working with
+          you in the future.
         </Text>
       </VStack>
       <ContactForm />
@@ -33,7 +43,7 @@ const ContactForm = () => {
     "mailto:Nightpp19@gmail.com?subject=Job&body=YourDescription";
 
   return (
-    <Container>
+    <Container mb={200}>
       <Box>
         <form
           action="
@@ -46,7 +56,7 @@ const ContactForm = () => {
               bg="#F8F8F8"
               placeholder="Enter Your Email"
             />
-            <a href={mailtoHref} >
+            <a href={mailtoHref}>
               <Button colorScheme="orange" bg={"primary.400"} size="md">
                 Contact Me
               </Button>

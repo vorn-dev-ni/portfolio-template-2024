@@ -1,162 +1,226 @@
 import {
   Box,
-  Card,
-  CardBody,
   Container,
   Grid,
   GridItem,
   Heading,
-  Image,
   Tab,
   TabList,
   TabPanels,
   Tabs,
   Text,
   VStack,
-  Breadcrumb,
-  BreadcrumbItem,
-  CardHeader,
 } from "@chakra-ui/react";
-import Example from "../../assets/projects/vuejs-twitch.jpg";
+import NextJs from "../../assets/icon/next.png";
+import laravel from "../../assets/icon/laravel.png";
+import NodeJs from "../../assets/icon/node.png";
+import ReactJs from "../../assets/icon/react.png";
+import Figma from "../../assets/icon/figma.png";
+import Android from "../../assets/icon/android.png";
+import RN from "../../assets/icon/rn.svg";
+import Flutter from "../../assets/icon/Google-flutter-logo.png";
+import Django from "../../assets/icon/dj.png";
 import VueProject from "../../assets/projects/vuejs-twitch.jpg";
 import { useEffect, useState } from "react";
 import { skills } from "../../utils/info";
+import WordPress from "../../assets/projects/wordpress.png";
+import ProjectCard from "./ProjectCard";
 
 const initState = [
   {
-    img: Example,
-    tag: ["All", "Front End"],
+    id: 1,
+    img: NextJs,
+    tag: ["All Project", "Front End"],
     description: "Restaurant Menu",
     languages: [skills[0], skills[1]],
+    link: "",
+    sourceCode: "https://github.com/nroV/restaurant_menu.git",
   },
 
   {
-    img: Example,
-    tag: ["All", "Front End"],
+    id: 2,
+    img: ReactJs,
+    tag: ["All Project", "Front End"],
     description: "Product Shop",
     languages: [skills[0]],
-  },
-  {
-    img: Example,
-    tag: ["All", "Front End"],
-    description: "ChatGPT Clone",
-    languages: [skills[0]],
-  },
-  {
-    img: Example,
-    tag: ["All", "Front End"],
-    description: "Portfolio Website",
-    languages: [skills[0]],
-  },
-  {
-    img: Example,
-    tag: ["All", "Front End", "Other"],
-    description: "Ecommerce Website",
-    languages: [skills[11]],
-  },
-  {
-    img: VueProject,
-    tag: ["All", "Front End"],
-    description: "Twitter Clone",
-    languages: [skills[0], skills[2]],
-  },
-  {
-    img: Example,
-    tag: ["All", "Front End"],
-    description: "Shop Location",
-    languages: [skills[0]],
-  },
-  {
-    img: Example,
-    tag: ["All", "Front End"],
-    description: "Courses Study",
-    languages: [skills[0]],
-  },
-  {
-    img: Example,
-    tag: ["All", "Front End", "Back End"],
-    description: "Movie Cinema ",
-    languages: [skills[7]],
-  },
-  {
-    img: Example,
-    tag: ["All", "Back End"],
-    description: "Task todo API",
-    languages: [skills[8], skills[9]],
-  },
-  {
-    img: Example,
-    tag: ["All", "Back End"],
-    description: "Product Ecommerce API",
-    languages: [skills[4], skills[5]],
-  },
-  {
-    img: Example,
-    tag: ["All", "Back End"],
-    description: "Job Application API similar to linkedIn ",
-    languages: [skills[8], skills[9]],
-  },
-  {
-    img: Example,
-    tag: ["All", "Mobile"],
-    description: "Donation App UI clone ",
-    languages: [skills[6]],
+    link: "",
+    sourceCode: "https://gitlab.com/web4913608/e-commerceproduct",
   },
 
   {
-    img: Example,
-    tag: ["All", "Mobile"],
+    id: 3,
+    img: ReactJs,
+    tag: ["All Project", "Front End"],
+    description: "Portfolio Website",
+    languages: [skills[0]],
+    link: "",
+    sourceCode: "https://github.com/vorn-dev-ni/portfolio-template-2024",
+  },
+  {
+    id: 4,
+    img: WordPress,
+    tag: ["All Project", "Front End", "Other"],
+    description: "Ecommerce Website",
+    languages: [skills[11]],
+    link: "https://vorn.ss2.store/",
+    sourceCode: "",
+  },
+  {
+    id: 5,
+    img: VueProject,
+    tag: ["All Project", "Front End"],
+    description: "Twitter Clone",
+    languages: [skills[0], skills[2]],
+    link: "https://main--twitch-vue-clone.netlify.app/home",
+    sourceCode: "https://github.com/vorn-dev-ni/twitter-node-express",
+  },
+  {
+    id: 6,
+    img: ReactJs,
+    tag: ["All Project", "Front End"],
+    description: "Shop Location",
+    languages: [skills[0]],
+    link: "",
+    sourceCode: "https://github.com/nroV/ShopLocationApi",
+  },
+  {
+    id: 7,
+    img: ReactJs,
+    tag: ["All Project", "Front End"],
+    description: "Courses Study",
+    languages: [skills[0]],
+    link: "",
+    sourceCode: "https://github.com/nroV/onlinecourse-reactjs",
+  },
+  {
+    id: 8,
+    img: laravel,
+    tag: ["All Project", "Front End", "Back End"],
+    description: "Movie Cinema ",
+    languages: [skills[7]],
+    link: "https://youtu.be/bJjoeHTtbsY",
+    sourceCode:
+      "https://www.figma.com/file/WSAhlN3wNMTWMd6O2RmpRn/Untitled?type=design&mode=design&t=kyUhpaL2nCTySFf0-0",
+  },
+  {
+    id: 9,
+    img: NodeJs,
+    tag: ["All Project", "Back End"],
+    description: "Task todo API",
+    languages: [skills[8], skills[9]],
+    link: "https://main--twitch-vue-clone.netlify.app/home",
+    sourceCode: "https://github.com/vorn-dev-ni/twitter-node-express",
+  },
+  {
+    id: 10,
+    img: Django,
+    tag: ["All Project", "Back End"],
+    description: "Product Ecommerce API",
+    languages: [skills[4], skills[5]],
+    link: "",
+    sourceCode: "https://gitlab.com/Vornii/django-api-ecommerce",
+  },
+  {
+    id: 11,
+    img: NodeJs,
+    tag: ["All Project", "Back End"],
+    description: "Job Application API similar to linkedIn ",
+    languages: [skills[8], skills[9]],
+    link: "",
+    sourceCode: "https://gitlab.com/Vornii/jobapplicationapi",
+  },
+  {
+    id: 12,
+    img: RN,
+    tag: ["All Project", "Mobile"],
+    description: "Donation App UI clone ",
+    languages: [skills[6]],
+    link: "",
+    sourceCode: "https://github.com/nroV/Donation-App.git",
+  },
+
+  {
+    id: 13,
+    img: RN,
+    tag: ["All Project", "Mobile"],
     description: "Archei App Scanner Convert Image to Text and Saved locAlly",
     languages: [skills[6]],
   },
   {
-    img: Example,
-    tag: ["All", "Mobile"],
+    id: 14,
+    img: NodeJs,
+    tag: ["All Project", "Back End"],
+    description: "Twitter Clone Service API",
+    languages: [skills[4], skills[5]],
+    link: "https://twitter-node-express.onrender.com/api/tweets",
+    sourceCode: "https://github.com/vorn-dev-ni/twitter-node-express",
+  },
+  {
+    id: 15,
+    img: RN,
+    tag: ["All Project", "Mobile"],
     description: "Social Fire App Similar to Instagram",
     languages: [skills[6]],
+    link: "",
+    sourceCode: "https://github.com/nroV/Social-Fire.git",
   },
+
   {
-    img: Example,
-    tag: ["All", "Mobile"],
-    description: "Social Fire App Similar to Instagram",
-    languages: [skills[6]],
-  },
-  {
-    img: Example,
-    tag: ["All", "Mobile"],
-    description: "Job Finder Application",
-    languages: [skills[3]],
-  },
-  {
-    img: Example,
-    tag: ["All", "Mobile"],
+    id: 17,
+    img: Flutter,
+    tag: ["All Project", "Mobile"],
     description: "Ecommerce Mobile App",
     languages: [skills[3]],
+    link: "",
+    sourceCode: "https://github.com/nroV/Flutter-Ecommerce.git",
   },
   {
-    img: Example,
-    tag: ["All", "Mobile"],
+    id: 18,
+    img: Flutter,
+    tag: ["All Project", "Mobile"],
     description: "Movie News App",
     languages: [skills[3]],
   },
   {
-    img: Example,
-    tag: ["All", "Mobile"],
+    id: 19,
+    img: Android,
+    tag: ["All Project", "Mobile"],
     description: "Simple Todo App",
     languages: [skills[10]],
+    link: "",
+    sourceCode: "https://gitlab.com/Vornii/android-todo-list",
+  },
+  {
+    id: 20,
+    img: ReactJs,
+    tag: ["All Project", "Front End"],
+    description: "ChatGPT Clone",
+    languages: [skills[0]],
+    link: "",
+    sourceCode: "https://gitlab.com/web4913608/chatgptclone",
   },
 ];
 const Project = () => {
   return (
-    <Box mb={100} id="project-me">
+    <Box
+      mb={100}
+      as={"section"}
+      id="project-me"
+      data-aos="fade-down"
+      data-aos-offset="200"
+      data-aos-delay="0"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
+    >
       <Heading as={"h3"} textAlign={"center"}>
         My Project
       </Heading>
       <VStack spacing={6} align="start" my={4}>
         <Text color={"accent.300"} textAlign={"center"}>
-          Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
-          lectus netus in. Aliquet donec morbi convAllis pretium. Turpis tempus
-          pharetra
+          During my four years of school, I undertook a comprehensive project
+          that showcased my expertise in web and mobile development, leveraging
+          a variety of frameworks to deliver a robust and innovative solution
         </Text>
       </VStack>
       <TabSection />
@@ -166,7 +230,7 @@ const Project = () => {
 
 const TabSection = () => {
   const tabs = ["All Project", "Front End", "Mobile", "Back End", "Other"];
-  const [selectTab, setSelectTab] = useState<string>("All");
+  const [selectTab, setSelectTab] = useState<string>("All Project");
 
   return (
     <Tabs variant="unstyled" w="100%">
@@ -208,11 +272,22 @@ const TabSection = () => {
 
 const PanelSection = ({ selectTag }: { selectTag: string }) => {
   const [projects, setProjects] = useState(initState);
+  const [target, setTarget] = useState<any | null>(null);
+  const clickProject = (item: any) => {
+    if (target?.id === item?.id) {
+      setTarget(null);
+    } else {
+      setTarget(item);
+    }
+  };
   useEffect(() => {
     setProjects((pre) =>
       pre.filter((project) => project.tag.includes(selectTag.trim()))
     );
-    return () => setProjects(initState);
+    return () => {
+      setProjects(initState);
+      setTarget(null);
+    };
   }, [selectTag]);
   return (
     <Grid
@@ -225,7 +300,12 @@ const PanelSection = ({ selectTag }: { selectTag: string }) => {
     >
       {projects.length ? (
         projects.map((project, index) => (
-          <ProjectCard item={project} key={index} />
+          <ProjectCard
+            item={project}
+            key={project.id}
+            onClick={clickProject}
+            target={target}
+          />
         ))
       ) : (
         <GridItem
@@ -250,42 +330,5 @@ const PanelSection = ({ selectTag }: { selectTag: string }) => {
     </Grid>
   );
 };
-const ProjectCard = ({ item }: { item: any }) => {
-  return (
-    <Card
-      bg="#F8F8F8"
-      shadow={0}
-      maxW="xl"
-      // minH={250}
-      borderRadius={"lg"}
-      className="hover:bg-gray-100 hover:cursor-pointer hover:scale-105 duration-300 ease-in-out transition-All"
-    >
-      <CardHeader p={0}>
-        <Image
-          boxSize={"100%"}
-          h={"100%"}
-          src={item.img}
-          my={0}
-          alt="skill-icon"
-          borderRadius="lg"
-          objectFit={"contain"}
-        />
-      </CardHeader>
 
-      <CardBody fontSize={12.5} fontWeight={"lg"} color={"black"} my={0}>
-        <Breadcrumb separator="-" alignItems={"center"}>
-          {item.tag.map((skill: string, index: any) => (
-            <BreadcrumbItem color={"primary.500"}>
-              <Text color={"primary.500"}>{skill}</Text>
-            </BreadcrumbItem>
-          ))}
-        </Breadcrumb>
-
-        <Heading size="xs" my={1}>
-          {item.description}
-        </Heading>
-      </CardBody>
-    </Card>
-  );
-};
 export default Project;

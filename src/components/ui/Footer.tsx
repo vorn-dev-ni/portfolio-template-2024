@@ -5,7 +5,7 @@ import { onScrollTop } from "../../actions";
 import Info from "./Info";
 const Footer = () => {
   return (
-    <Box w={"100%"} h={"fit-content"}>
+    <Box w={"100%"} h={"fit-content"} >
       <ChevronUpIcon
         onClick={onScrollTop}
         bg="white"

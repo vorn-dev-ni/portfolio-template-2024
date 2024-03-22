@@ -11,13 +11,12 @@ const routes = createBrowserRouter([
         index: true,
         element: <HomePage />,
       },
-      // define your routes here
+
     ],
   },
   {
     path: "*",
     element: <NotFound />,
   },
-  // define your routes here
 ]);
 export default routes;

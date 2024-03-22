@@ -1,20 +1,12 @@
 import {
-  Box,
-  Button,
   Card,
   CardBody,
-  CardFooter,
   CardHeader,
   Container,
   Grid,
   GridItem,
-  HStack,
   Heading,
   Image,
-  Slider,
-  SliderFilledTrack,
-  SliderThumb,
-  SliderTrack,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -50,15 +42,28 @@ const Service = () => {
     },
   ];
   return (
-    <Container mb={100} maxWidth={'1200px'}>
+    <Container
+      // mb={100}
+      maxWidth={"1200px"}
+      data-aos="slide-down"
+      data-aos-offset="200"
+      data-aos-delay="0"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
+      as={"section"}
+    >
       <Heading as={"h3"} textAlign={"center"}>
         Services
       </Heading>
       <VStack spacing={6} align="start" my={4}>
         <Text color={"accent.300"} textAlign={"center"}>
-          Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
-          lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus
-          pharetra
+          On the front-end, I excel in React.js and Next.js, leveraging their
+          powerful features to create dynamic and responsive user interfaces.
+          For the back-end, I prefer Express.js for its simplicity and
+          scalability, allowing me to build robust APIs and services
+          efficiently. In the realm of mobile development, I'm proficient in
+          Flutter and React Native,
         </Text>
       </VStack>
       <Grid
@@ -83,11 +88,18 @@ const CardSkill = ({ item }: { item: any }) => {
   return (
     <Card
       bg="#F8F8F8"
+      data-aos="fade-down-right"
+      data-aos-offset="200"
+      data-aos-delay="0"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
+      data-aos-mirror="true"
       shadow={0}
       maxW="xl"
       minH={250}
       borderRadius={"lg"}
-     className="hover:bg-gray-100 hover:cursor-pointer hover:scale-105 duration-300 ease-in-out transition-all"
+      className="hover:bg-gray-100 hover:cursor-pointer hover:scale-105 duration-300 ease-in-out transition-all"
     >
       <CardHeader mb={0}>
         <Image
@@ -98,7 +110,7 @@ const CardSkill = ({ item }: { item: any }) => {
           objectFit={"contain"}
         />
       </CardHeader>
-      <CardBody fontSize={12.5} fontWeight={"lg"} color={"black"} my={0} >
+      <CardBody fontSize={12.5} fontWeight={"lg"} color={"black"} my={0}>
         <Heading size="md" mb={2}>
           {item.skill}
         </Heading>
