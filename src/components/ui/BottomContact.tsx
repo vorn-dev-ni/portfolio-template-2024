@@ -3,7 +3,6 @@ import MyLogo from "./MyLogo";
 import Menu from "./Menu";
 import SocialStack from "./SocialStack";
 export const BottomContact = () => {
-  const IconImage = "../../assets/icon/Subtract.png";
   return (
     <Box as="div" w="100%" bg={"gray.300"}>
       <Container maxW={"md"}>

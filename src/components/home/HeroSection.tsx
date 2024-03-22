@@ -37,17 +37,7 @@ const HeroSection = () => {
 };
 
 const LeftHeader = () => {
-  const sequence = [
-    // Same substring at the start will only be typed out once, initially
-    "Hi My Name's",
-    1000, // wait 1s before replacing "Mice" with "Hamsters"
-    "Siv Sovanpanhavorn",
-    2000,
-    "Web & Mobile",
-    1000,
-    "Developer",
-    1000,
-  ];
+
   return (
     <Container color={"black"} mb={20}>
       <Box as="div">

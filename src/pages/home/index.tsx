@@ -27,7 +27,7 @@ const HomePage = () => {
     clearHash();
 
     return () => clearHash();
-  }, []);
+  }, [navigation]);
 
   return (
     <Container maxW="4xl">
