@@ -1,4 +1,5 @@
 import { Container } from "@chakra-ui/react";
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -9,7 +10,7 @@ import Project from "../../components/home/Project";
 import SendContact from "../../components/home/SendContact";
 import { useEffect } from "react";
 import { AosOption } from "../../utils/aos";
-
+import PreviewImage from "../../../src/assets/preview.png";
 const HomePage = () => {
   const navigation = useNavigate();
   useEffect(() => {
@@ -31,6 +32,14 @@ const HomePage = () => {
 
   return (
     <Container maxW="4xl">
+      <Helmet>
+        <title>Portfolio - Vorni</title>
+        <meta
+          name="description"
+          content="Hi My name is SivSovanpanhavorn. This is my personal portfolio"
+        />
+        <meta name="image" content={PreviewImage} />
+      </Helmet>
       <HeroSection />
       <AboutMe />
       <Service />

@@ -20,9 +20,11 @@ import RN from "../../assets/icon/rn.svg";
 import Flutter from "../../assets/icon/Google-flutter-logo.png";
 import Django from "../../assets/icon/dj.png";
 import VueProject from "../../assets/projects/vuejs-twitch.jpg";
+import Portfolio from "../../assets/preview.png";
+import WordPress from "../../assets/projects/wordpress.png";
 import { useEffect, useState } from "react";
 import { skills } from "../../utils/info";
-import WordPress from "../../assets/projects/wordpress.png";
+
 import ProjectCard from "./ProjectCard";
 
 const initState = [
@@ -48,11 +50,11 @@ const initState = [
 
   {
     id: 3,
-    img: ReactJs,
+    img: Portfolio,
     tag: ["All Project", "Front End"],
     description: "Portfolio Website",
     languages: [skills[0]],
-    link: "",
+    link: "https://65fd342cad067c0008183b48--panhavorn-portfolio.netlify.app/",
     sourceCode: "https://github.com/vorn-dev-ni/portfolio-template-2024",
   },
   {
