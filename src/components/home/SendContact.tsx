@@ -15,13 +15,14 @@ const SendContact = () => {
       as={"section"}
       id="contact-me"
       justifyContent={"space-between"}
-      data-aos="fade-left"
-      data-aos-offset="120"
-      data-aos-delay="0"
-      data-aos-duration="500"
-      data-aos-easing="ease-in-out"
-      data-aos-anchor-placement="top-center"
-      data-aos-mirror="true"
+      my={200}
+      // data-aos="fade-down"
+      // data-aos-offset="200"
+      // data-aos-delay="0"
+      // data-aos-duration="500"
+      // data-aos-easing="ease-in-out"
+      // data-aos-anchor-placement="top-center"
+
     >
       <Heading as={"h3"} textAlign={"center"}>
         Lets Design Together

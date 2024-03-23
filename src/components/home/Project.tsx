@@ -54,7 +54,7 @@ const initState = [
     tag: ["All Project", "Front End"],
     description: "Portfolio Website",
     languages: [skills[0]],
-    link: "https://65fd342cad067c0008183b48--panhavorn-portfolio.netlify.app/",
+    link: "https://main--panhavorn-portfolio.netlify.app/",
     sourceCode: "https://github.com/vorn-dev-ni/portfolio-template-2024",
   },
   {
@@ -84,15 +84,7 @@ const initState = [
     link: "",
     sourceCode: "https://github.com/nroV/ShopLocationApi",
   },
-  {
-    id: 7,
-    img: ReactJs,
-    tag: ["All Project", "Front End"],
-    description: "Courses Study",
-    languages: [skills[0]],
-    link: "",
-    sourceCode: "https://github.com/nroV/onlinecourse-reactjs",
-  },
+
   {
     id: 8,
     img: laravel,
@@ -118,8 +110,8 @@ const initState = [
     tag: ["All Project", "Back End"],
     description: "Product Ecommerce API",
     languages: [skills[4], skills[5]],
-    link: "",
-    sourceCode: "https://gitlab.com/Vornii/django-api-ecommerce",
+    link: "https://django-api-ecommerce-50c3b7e699ce.herokuapp.com/swagger/",
+    sourceCode: "https://github.com/nroV/django-ecommerce.git",
   },
   {
     id: 11,
@@ -181,6 +173,8 @@ const initState = [
     tag: ["All Project", "Mobile"],
     description: "Movie News App",
     languages: [skills[3]],
+    link: "",
+    sourceCode: "https://github.com/vorn-dev-ni/flutter-movie",
   },
   {
     id: 19,
@@ -200,11 +194,30 @@ const initState = [
     link: "",
     sourceCode: "https://gitlab.com/web4913608/chatgptclone",
   },
-];
-const Project = () => {
+  {
+    id: 21,
+    img: ReactJs,
+    tag: ["All Project", "Front End"],
+    description: "Course Online Management ",
+    languages: [skills[6]],
+    link: "https://657fbfeb8b2c2863b144e29b--deluxe-kulfi-215c3b.netlify.app/",
+    sourceCode: "https://github.com/nroV/onlinecourse-reactjs",
+  },
+  {
+    id: 22,
+    img: Flutter,
+    tag: ["All Project", "Mobile"],
+    description: "Food Recipe App",
+    languages: [skills[3]],
+    link: "",
+    sourceCode: "https://github.com/vorn-dev-ni/food_recipes",
+  },
+
+];const Project = () => {
+
   return (
     <Box
-      mb={100}
+      mb={0}
       as={"section"}
       id="project-me"
       data-aos="fade-down"
