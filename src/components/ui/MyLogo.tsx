@@ -5,7 +5,7 @@ import { onScrollTop } from "../../actions";
 
 const MyLogo = () => {
   return (
-    <Container my={0} className="hover:cursor-pointer">
+    <Container  className="hover:cursor-pointer">
       <Link to={'/'} onClick={onScrollTop}>
         <Flex alignItems={"center"} gap={4}>
           <Image

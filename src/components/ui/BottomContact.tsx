@@ -4,7 +4,7 @@ import Menu from "./Menu";
 import SocialStack from "./SocialStack";
 export const BottomContact = () => {
   return (
-    <Box as="div" w="100%" bg={"gray.300"}>
+    <Box as="div" w="100%" bg={"gray.300"} p={5}>
       <Container maxW={"md"}>
         <Center>
           <Flex justifyContent={"center"}>

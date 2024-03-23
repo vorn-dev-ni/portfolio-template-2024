@@ -22,7 +22,6 @@ const SendContact = () => {
       // data-aos-duration="500"
       // data-aos-easing="ease-in-out"
       // data-aos-anchor-placement="top-center"
-
     >
       <Heading as={"h3"} textAlign={"center"}>
         Lets Design Together

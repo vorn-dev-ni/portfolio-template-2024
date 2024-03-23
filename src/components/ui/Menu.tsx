@@ -18,7 +18,7 @@ const Menu = ({ layout = "verti" }: { layout: "hori" | "verti" }) => {
       const sectionElements = document.querySelectorAll<HTMLElement>("section");
       sectionElements.forEach((element: HTMLElement) => {
         if (window.scrollY + 300 >= element.offsetTop) {
-          console.log(element.offsetTop);
+
           if (element.getAttribute("id")) {
             setActive(element.getAttribute("id"));
           }
@@ -27,7 +27,6 @@ const Menu = ({ layout = "verti" }: { layout: "hori" | "verti" }) => {
       });
     });
   }, []);
-  console.log(active);
 
   return (
     <Stack
