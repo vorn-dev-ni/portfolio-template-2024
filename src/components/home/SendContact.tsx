@@ -9,7 +9,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { useToast } from '@chakra-ui/react'
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { sendMessage } from "../../actions/service";
 
 const SendContact = () => {
@@ -42,8 +42,6 @@ const SendContact = () => {
 };
 
 const ContactForm = () => {
-  const mailtoHref =
-    "mailto:Nightpp19@gmail.com?subject=Job&body=YourDescription";
   const toast = useToast()
   const inputRef = useRef<HTMLInputElement | null >(null)
     const handleSubmit =async () => {
