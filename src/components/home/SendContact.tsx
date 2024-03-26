@@ -52,9 +52,9 @@ const ContactForm = () => {
         inputRef!.current!.value = ''
         toast({
           title: 'Your Email has Successfully Sent ',
-          description: "We've got your contact thanks you",
+          description: "We've got your contact Please Check your Spam Email",
           status: 'success',
-          duration: 2000,
+          duration: 6000,
           isClosable: true,
         })
         console.log(result)
