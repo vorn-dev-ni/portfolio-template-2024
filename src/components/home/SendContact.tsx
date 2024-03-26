@@ -8,6 +8,9 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { useToast } from '@chakra-ui/react'
+import { useRef, useState } from "react";
+import { sendMessage } from "../../actions/service";
 
 const SendContact = () => {
   return (
@@ -41,7 +44,32 @@ const SendContact = () => {
 const ContactForm = () => {
   const mailtoHref =
     "mailto:Nightpp19@gmail.com?subject=Job&body=YourDescription";
-
+  const toast = useToast()
+  const inputRef = useRef<HTMLInputElement | null >(null)
+    const handleSubmit =async () => {
+      try {
+        const result = await sendMessage(inputRef!.current!.value.trim())
+        inputRef!.current!.value = ''
+        toast({
+          title: 'Your Email has Successfully Sent ',
+          description: "We've got your contact thanks you",
+          status: 'success',
+          duration: 2000,
+          isClosable: true,
+        })
+        console.log(result)
+      } catch (error:any) {
+        toast({
+          title: 'Check your email ',
+          description: "Failed to send message",
+          status: 'error',
+          duration: 3000,
+          isClosable: true,
+        })
+      }
+  
+        
+    }
   return (
     <Container mb={200}>
       <Box>
@@ -55,12 +83,14 @@ const ContactForm = () => {
               focusBorderColor="primary.400"
               bg="#F8F8F8"
               placeholder="Enter Your Email"
+              ref={inputRef}
+
             />
-            <a href={mailtoHref}>
-              <Button colorScheme="orange" bg={"primary.400"} size="md">
+            {/* <a href={mailtoHref}> */}
+              <Button colorScheme="orange" bg={"primary.400"} size="md" type="button" onClick={handleSubmit}>
                 Contact Me
               </Button>
-            </a>
+            {/* </a> */}
           </HStack>
         </form>
       </Box>

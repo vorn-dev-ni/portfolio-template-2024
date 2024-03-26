@@ -155,7 +155,7 @@ const initState = [
     description: "Social Fire App Similar to Instagram",
     languages: [skills[6]],
     link: "",
-    sourceCode: "https://github.com/nroV/Social-Fire.git",
+    sourceCode: "https://github.com/nroV/Social-Fire",
   },
 
   {
